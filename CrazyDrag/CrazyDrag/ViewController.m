@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+- (IBAction)showAlert:(id)sender;
 
 @end
 
@@ -24,4 +25,6 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)showAlert:(id)sender {
+}
 @end
