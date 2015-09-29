@@ -10,17 +10,30 @@
 
 @interface ViewController (){
     int currentValue;
+    int targetValue;
+    int score;
 }
 - (IBAction)showAlert:(id)sender;
 - (IBAction)sliderMoved:(id)sender;
 @property (strong, readwrite, nonatomic) IBOutlet UISlider *slider;
+@property (strong, readwrite, nonatomic) IBOutlet UILabel *targetLabel;
 @end
 
 @implementation ViewController
 @synthesize slider;
+@synthesize targetLabel;
+- (void)updateLabels{
+    self.targetLabel.text = [NSString stringWithFormat:@"%d",targetValue];
+}
+- (void)startNewRound{
+    targetValue = 1 + (arc4random() % 100);
+    currentValue = 50;
+    self.slider.value = currentValue;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    currentValue = self.slider.value;//初始化currentValue的值
+    [self startNewRound];
+    [self updateLabels];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -30,8 +43,13 @@
 }
 
 - (IBAction)showAlert:(id)sender {
-    NSString *message = [NSString stringWithFormat:@"滑动条的当前数值是：%d", currentValue];
-    [[[UIAlertView alloc]initWithTitle:@"您好，苍老师！" message:message delegate:nil cancelButtonTitle:@"我来帮转一次，你懂的" otherButtonTitles:nil, nil]show];
+    int difference = abs(currentValue - targetValue);
+    int point = 100 - difference;
+    score += point;
+    NSString *message = [NSString stringWithFormat:@"恭喜高富帅，您的得分是：%d", point];
+    [[[UIAlertView alloc]initWithTitle:@"您好，土豪！" message:message delegate:nil cancelButtonTitle:@"朕已知晓，爱卿辛苦了" otherButtonTitles:nil, nil]show];
+    [self startNewRound];
+    [self updateLabels];
 }
 
 - (IBAction)sliderMoved:(UISlider*)sender {

@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 @property(strong, readonly, nonatomic) IBOutlet UISlider *slider;
+@property (strong, readonly, nonatomic) IBOutlet UILabel *targetLabel;
 
 @end
 
