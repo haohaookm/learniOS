@@ -15,6 +15,8 @@
 		BF24B5511BAEA9AA0020326C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF24B54F1BAEA9AA0020326C /* LaunchScreen.storyboard */; };
 		BF24B55C1BAEA9AB0020326C /* CrazyDragTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF24B55B1BAEA9AB0020326C /* CrazyDragTests.m */; };
 		BF24B5671BAEA9AB0020326C /* CrazyDragUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF24B5661BAEA9AB0020326C /* CrazyDragUITests.m */; };
+		BF5E60301BC7F541006E9106 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5E602E1BC7F541006E9106 /* AboutViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BF5E60311BC7F541006E9106 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5E602F1BC7F541006E9106 /* AboutViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		BF24B5621BAEA9AB0020326C /* CrazyDragUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyDragUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF24B5661BAEA9AB0020326C /* CrazyDragUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrazyDragUITests.m; sourceTree = "<group>"; };
 		BF24B5681BAEA9AB0020326C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5E602D1BC7F541006E9106 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = ../AboutViewController.h; sourceTree = "<group>"; };
+		BF5E602E1BC7F541006E9106 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = ../AboutViewController.m; sourceTree = "<group>"; };
+		BF5E602F1BC7F541006E9106 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutViewController.xib; path = ../AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,9 @@
 		BF24B5411BAEA9AA0020326C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BF5E602D1BC7F541006E9106 /* AboutViewController.h */,
+				BF5E602E1BC7F541006E9106 /* AboutViewController.m */,
+				BF5E602F1BC7F541006E9106 /* AboutViewController.xib */,
 				BF24B5421BAEA9AA0020326C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -245,6 +253,7 @@
 			files = (
 				BF24B5511BAEA9AA0020326C /* LaunchScreen.storyboard in Resources */,
 				BF24B54E1BAEA9AA0020326C /* Assets.xcassets in Resources */,
+				BF5E60311BC7F541006E9106 /* AboutViewController.xib in Resources */,
 				BF24B54C1BAEA9AA0020326C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +281,7 @@
 			files = (
 				BF24B5491BAEA9AA0020326C /* ViewController.m in Sources */,
 				BF24B5461BAEA9AA0020326C /* AppDelegate.m in Sources */,
+				BF5E60301BC7F541006E9106 /* AboutViewController.m in Sources */,
 				BF24B5431BAEA9AA0020326C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
